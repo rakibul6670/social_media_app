@@ -1,0 +1,173 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:social_media_app/common_widgets/custom_text_button.dart';
+import 'package:social_media_app/constants/text_font_style.dart';
+import 'package:social_media_app/features/auth/data/interest_left_map_data.dart';
+import 'package:social_media_app/features/auth/data/interest_right_map_data.dart';
+import 'package:social_media_app/features/auth/widgets/circle_number.dart';
+import 'package:social_media_app/features/auth/widgets/custom_choice_chip.dart';
+import 'package:social_media_app/gen/assets.gen.dart';
+import 'package:social_media_app/gen/colors.gen.dart';
+import 'package:social_media_app/helpers/all_routes.dart';
+import 'package:social_media_app/helpers/navigation_service.dart';
+import 'package:social_media_app/helpers/ui_helpers.dart';
+
+class InterestedSelectScreen extends StatefulWidget {
+  const InterestedSelectScreen({super.key});
+
+  @override
+  State<InterestedSelectScreen> createState() => _InterestedSelectScreenState();
+}
+
+class _InterestedSelectScreenState extends State<InterestedSelectScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
+      appBar: AppBar(
+        backgroundColor: AppColors.cFFFFFF,
+        automaticallyImplyLeading: false,
+        title: Row(
+          children: [
+            GestureDetector(
+              onTap: () {
+                //   log("Back button cliked :${NavigationService.goBack}");
+                // NavigationService.goBack;
+
+                //   //  NavigationService.goBackCall();
+                //   Navigator.of(context).pop();
+              },
+              child: Image.asset(
+                Assets.icons.leftArrow.path,
+                height: 24.h,
+                width: 24.w,
+              ),
+            ),
+            UIHelper.horizontalSpace(8),
+            Text(
+              "Back",
+              style: TextFontStyle.textStyle16cFFFFFFPoppinsSemiBold
+                  .copyWith(color: AppColors.c434343),
+            ),
+          ],
+        ),
+        actions: [
+          SizedBox(
+            width: 110,
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Positioned(right: 0, child: circleNumber(3, AppColors.cD7D7D7)),
+
+               
+                Positioned(
+                    right: 64, child: circleNumber(1, AppColors.cD7D7D7)),
+
+                     Positioned(
+                      left: 0,
+                      right: -4,
+      
+                    child: circleNumber(2, AppColors.cfe4938)),
+                    
+              ],
+            ),
+          ),
+
+
+          UIHelper.horizontalSpace(23.h),
+        ],
+      ),
+      body: SafeArea(
+          child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            UIHelper.verticalSpace(24.h),
+            Text(
+              "What are you \n interested in?",
+              style: TextFontStyle.textStyle32c141A52PoppinsBold,
+            ),
+            UIHelper.verticalSpace(16.h),
+            Text(
+              "Choose a few categories you like, \n you can change them later",
+              style: TextFontStyle.textStyle16cFFFFFFPoppinsSemiBold
+                  .copyWith(color: const Color(0xFF141A52)),
+            ),
+            UIHelper.verticalSpace(32.h),
+
+            // INTEREST ChIP
+            Row(
+              spacing: 23.w,
+              children: [
+          
+                Expanded(
+                  child: Column(
+                    spacing: 24.h,
+                    children: interestsLeft.keys.map((key){
+                      return CustomTexButton(
+                      alignment: Alignment.center,
+                      textStyle: TextFontStyle.textStyle16cFFFFFFPoppinsSemiBold.copyWith(
+                        color: interestsLeft[key]!?Colors.white : Color(0xffC2C2C2)
+                      ),
+                      minimumSize: Size(216.w, 56.h),
+                      bgColor: interestsLeft[key]!?AppColors.allPrimaryColor: AppColors.cF3F7FC ,
+                      onPressed: () {
+                        interestsLeft[key] = !interestsLeft[key]!;
+                        setState(() {
+                          
+                        });
+                      },
+                      title: key,
+                    );
+                    }).toList()
+                  ),
+                ),
+
+                Expanded(
+                  child: Column(
+                    spacing: 24.h,
+                    children: interestsRight.keys.map((key){
+                      return CustomTexButton(
+                      alignment: Alignment.center,
+                      minimumSize: Size(216.w, 56.h),
+                           textStyle: TextFontStyle.textStyle16cFFFFFFPoppinsSemiBold.copyWith(
+                        color: interestsRight[key]!?Colors.white : Color(0xffC2C2C2)
+                      ),
+                      bgColor: interestsRight[key]!?AppColors.allPrimaryColor: AppColors.cF3F7FC ,
+                      onPressed: () {
+                        interestsRight[key] = !interestsRight[key]!;
+                        setState(() {
+                          
+                        });
+                      },
+                      title: key,
+                    );
+                    }).toList()
+                  ),
+                ),
+
+                
+            
+              ],
+            ),
+
+
+           
+
+            UIHelper.verticalSpace(96.h),
+            CustomTexButton(
+              alignment: Alignment.center,
+              minimumSize: Size(216.w, 56.h),
+              onPressed: () =>
+                  NavigationService.navigateTo(Routes.enterUserNameScreen),
+              title: "Next Step",
+            )
+          ],
+        ),
+      )),
+    );
+  }
+}

@@ -5,6 +5,8 @@ import 'package:social_media_app/common_widgets/custom_text_form_field.dart';
 import 'package:social_media_app/constants/text_font_style.dart';
 import 'package:social_media_app/gen/assets.gen.dart';
 import 'package:social_media_app/gen/colors.gen.dart';
+import 'package:social_media_app/helpers/all_routes.dart';
+import 'package:social_media_app/helpers/navigation_service.dart';
 import 'package:social_media_app/helpers/ui_helpers.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -29,7 +31,8 @@ class _SignInScreenState extends State<SignInScreen> {
             children: [
               GestureDetector(
                 onTap: () {
-                  //Navigator.pop(context);
+                  // Navigator.pop(context);
+                  NavigationService.goBack;
                 },
                 child: Image.asset(
                   Assets.icons.leftArrow.path,
@@ -46,6 +49,10 @@ class _SignInScreenState extends State<SignInScreen> {
             ],
           ),
         ),
+
+
+
+        
         body: SafeArea(
             child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24),
@@ -68,7 +75,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 hintText: "Enter your password",
               ),
 
-              //Remember me CheckBox 
+              //Remember me CheckBox
               UIHelper.verticalSpace(22.h),
 
               Row(
@@ -92,7 +99,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
               Center(
                   child: CustomTexButton(
-                onPressed: () {},
+                 onPressed: () => NavigationService.navigateTo(Routes.genderSelectScreen),
                 title: "Login Hapnezz",
               )),
               UIHelper.verticalSpace(32),
@@ -105,12 +112,20 @@ class _SignInScreenState extends State<SignInScreen> {
                     minimumSize: Size(153.w, 53.h),
                     onPressed: () {},
                     title: "Gmail",
+                    textStyle: TextFontStyle.textStyle16cFFFFFFPoppinsSemiBold
+                        .copyWith(
+                      fontSize: 15,
+                    ),
                   ),
                   UIHelper.horizontalSpace(21),
                   CustomTexButton(
-                    //  bgColor: AppColors.,
+                   bgColor:const Color(0xff1E81C9), 
                     minimumSize: Size(153.w, 53.h),
                     onPressed: () {}, title: "Facebook",
+                    textStyle: TextFontStyle.textStyle16cFFFFFFPoppinsSemiBold
+                        .copyWith(
+                      fontSize: 15,
+                    ),
                   )
                 ],
               ),
@@ -119,13 +134,17 @@ class _SignInScreenState extends State<SignInScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have and account ?",style:  TextFontStyle.textStyle11c212652PoppinsRegular,),
-
+                  Text(
+                    "Don't have and account ?",
+                    style: TextFontStyle.textStyle11c212652PoppinsRegular,
+                  ),
                   GestureDetector(
-                    onTap: (){},
-                    child: Text(" Sign UP",style:  TextFontStyle.textStyle11c212652PoppinsRegular.copyWith(
-                      color: AppColors.c2F80ED
-                    ),))
+                      onTap: () => NavigationService.navigateTo(Routes.signUpScreen),
+                      child: Text(
+                        " Sign Up",
+                        style: TextFontStyle.textStyle11c212652PoppinsRegular
+                            .copyWith(color: AppColors.c2F80ED),
+                      ))
                 ],
               )
 

@@ -31,7 +31,7 @@ class CustomTextFormField extends StatelessWidget {
       textInputAction: textInputAction,
       keyboardType: keyboardType,
       decoration: InputDecoration(
-        fillColor: AppColors.cF3F7FC,
+       fillColor: AppColors.cF3F7FC,
         filled: true,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(6),

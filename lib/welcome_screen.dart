@@ -97,7 +97,7 @@ class WelcomeScreen extends StatelessWidget {
                  onPressed: (){
                   log("Route to sign up screen : ${Routes.signUpScreen}");
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpScreen()));
-                 NavigationService.navigateToUntilReplacement(Routes.signUpScreen);
+                 NavigationService.navigateTo(Routes.signUpScreen);
                  },
                   title: "Login Hopnezz")
             ],

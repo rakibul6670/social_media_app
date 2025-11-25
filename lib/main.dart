@@ -22,8 +22,10 @@ class SocialMedia extends StatelessWidget {
       builder: (_,child){
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          
             navigatorKey: NavigationService.navigatorKey,
               onGenerateRoute: RouteGenerator.generateRoute,
+
           home: const WelcomeScreen(),
         );
       },

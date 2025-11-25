@@ -14,20 +14,90 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/activity_active.png
+  AssetGenImage get activityActive =>
+      const AssetGenImage('assets/icons/activity_active.png');
+
+  /// File path: assets/icons/activity_inactive.png
+  AssetGenImage get activityInactive =>
+      const AssetGenImage('assets/icons/activity_inactive.png');
+
+  /// File path: assets/icons/add_post_active.png
+  AssetGenImage get addPostActive =>
+      const AssetGenImage('assets/icons/add_post_active.png');
+
+  /// File path: assets/icons/add_post_inactive.png
+  AssetGenImage get addPostInactive =>
+      const AssetGenImage('assets/icons/add_post_inactive.png');
+
+  /// File path: assets/icons/down_arrow.png
+  AssetGenImage get downArrow =>
+      const AssetGenImage('assets/icons/down_arrow.png');
+
   /// File path: assets/icons/left_arrow.png
   AssetGenImage get leftArrow =>
       const AssetGenImage('assets/icons/left_arrow.png');
+
+  /// File path: assets/icons/message_active.png
+  AssetGenImage get messageActive =>
+      const AssetGenImage('assets/icons/message_active.png');
+
+  /// File path: assets/icons/message_inactive.png
+  AssetGenImage get messageInactive =>
+      const AssetGenImage('assets/icons/message_inactive.png');
+
+  /// File path: assets/icons/plus.png
+  AssetGenImage get plus => const AssetGenImage('assets/icons/plus.png');
+
+  /// File path: assets/icons/search.png
+  AssetGenImage get search => const AssetGenImage('assets/icons/search.png');
+
+  /// File path: assets/icons/search_active.png
+  AssetGenImage get searchActive =>
+      const AssetGenImage('assets/icons/search_active.png');
+
+  /// File path: assets/icons/search_inactive.png
+  AssetGenImage get searchInactive =>
+      const AssetGenImage('assets/icons/search_inactive.png');
+
+  /// File path: assets/icons/user_profile_active.png
+  AssetGenImage get userProfileActive =>
+      const AssetGenImage('assets/icons/user_profile_active.png');
+
+  /// File path: assets/icons/user_profile_inactive.png
+  AssetGenImage get userProfileInactive =>
+      const AssetGenImage('assets/icons/user_profile_inactive.png');
 
   /// File path: assets/icons/welcome_logo.png
   AssetGenImage get welcomeLogo =>
       const AssetGenImage('assets/icons/welcome_logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [leftArrow, welcomeLogo];
+  List<AssetGenImage> get values => [
+        activityActive,
+        activityInactive,
+        addPostActive,
+        addPostInactive,
+        downArrow,
+        leftArrow,
+        messageActive,
+        messageInactive,
+        plus,
+        search,
+        searchActive,
+        searchInactive,
+        userProfileActive,
+        userProfileInactive,
+        welcomeLogo
+      ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
+
+  /// File path: assets/images/Frame 11.png
+  AssetGenImage get frame11 =>
+      const AssetGenImage('assets/images/Frame 11.png');
 
   /// File path: assets/images/female.png
   AssetGenImage get female => const AssetGenImage('assets/images/female.png');
@@ -48,8 +118,14 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/welcome_rectangle.png');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [female, male, welcomeBackground, welcomeForeground, welcomeRectangle];
+  List<AssetGenImage> get values => [
+        frame11,
+        female,
+        male,
+        welcomeBackground,
+        welcomeForeground,
+        welcomeRectangle
+      ];
 }
 
 class Assets {

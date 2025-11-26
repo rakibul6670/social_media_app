@@ -14,6 +14,10 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/achivementpng.png
+  AssetGenImage get achivementpng =>
+      const AssetGenImage('assets/icons/achivementpng.png');
+
   /// File path: assets/icons/activity_active.png
   AssetGenImage get activityActive =>
       const AssetGenImage('assets/icons/activity_active.png');
@@ -30,13 +34,23 @@ class $AssetsIconsGen {
   AssetGenImage get addPostInactive =>
       const AssetGenImage('assets/icons/add_post_inactive.png');
 
+  /// File path: assets/icons/comment.png
+  AssetGenImage get comment => const AssetGenImage('assets/icons/comment.png');
+
   /// File path: assets/icons/down_arrow.png
   AssetGenImage get downArrow =>
       const AssetGenImage('assets/icons/down_arrow.png');
 
+  /// File path: assets/icons/forword_arrow.png
+  AssetGenImage get forwordArrow =>
+      const AssetGenImage('assets/icons/forword_arrow.png');
+
   /// File path: assets/icons/left_arrow.png
   AssetGenImage get leftArrow =>
       const AssetGenImage('assets/icons/left_arrow.png');
+
+  /// File path: assets/icons/liked.png
+  AssetGenImage get liked => const AssetGenImage('assets/icons/liked.png');
 
   /// File path: assets/icons/message_active.png
   AssetGenImage get messageActive =>
@@ -46,8 +60,15 @@ class $AssetsIconsGen {
   AssetGenImage get messageInactive =>
       const AssetGenImage('assets/icons/message_inactive.png');
 
+  /// File path: assets/icons/notification.png
+  AssetGenImage get notification =>
+      const AssetGenImage('assets/icons/notification.png');
+
   /// File path: assets/icons/plus.png
   AssetGenImage get plus => const AssetGenImage('assets/icons/plus.png');
+
+  /// File path: assets/icons/save.png
+  AssetGenImage get save => const AssetGenImage('assets/icons/save.png');
 
   /// File path: assets/icons/search.png
   AssetGenImage get search => const AssetGenImage('assets/icons/search.png');
@@ -59,6 +80,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/search_inactive.png
   AssetGenImage get searchInactive =>
       const AssetGenImage('assets/icons/search_inactive.png');
+
+  /// File path: assets/icons/share.png
+  AssetGenImage get share => const AssetGenImage('assets/icons/share.png');
 
   /// File path: assets/icons/user_profile_active.png
   AssetGenImage get userProfileActive =>
@@ -74,18 +98,25 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        achivementpng,
         activityActive,
         activityInactive,
         addPostActive,
         addPostInactive,
+        comment,
         downArrow,
+        forwordArrow,
         leftArrow,
+        liked,
         messageActive,
         messageInactive,
+        notification,
         plus,
+        save,
         search,
         searchActive,
         searchInactive,
+        share,
         userProfileActive,
         userProfileInactive,
         welcomeLogo
@@ -95,12 +126,17 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/Frame 11.png
-  AssetGenImage get frame11 =>
-      const AssetGenImage('assets/images/Frame 11.png');
-
   /// File path: assets/images/female.png
   AssetGenImage get female => const AssetGenImage('assets/images/female.png');
+
+  /// File path: assets/images/friend1.png
+  AssetGenImage get friend1 => const AssetGenImage('assets/images/friend1.png');
+
+  /// File path: assets/images/friend2.png
+  AssetGenImage get friend2 => const AssetGenImage('assets/images/friend2.png');
+
+  /// File path: assets/images/friend3.png
+  AssetGenImage get friend3 => const AssetGenImage('assets/images/friend3.png');
 
   /// File path: assets/images/male.png
   AssetGenImage get male => const AssetGenImage('assets/images/male.png');
@@ -119,8 +155,10 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        frame11,
         female,
+        friend1,
+        friend2,
+        friend3,
         male,
         welcomeBackground,
         welcomeForeground,

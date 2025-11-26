@@ -71,6 +71,18 @@ class TextFontStyle {
     
  
   );
+    static final textStyle12c787878PoppinsRegular= TextStyle(
+    fontFamily: "Poppins",
+    fontFamilyFallback: const [
+      'Open Sans',
+      'Roboto',
+      'Noto Sans',
+    ],
+    color: AppColors.c787878,
+    fontSize: 12.sp,
+    
+ 
+  );
 
 
  

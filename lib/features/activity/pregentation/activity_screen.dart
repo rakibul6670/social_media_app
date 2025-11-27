@@ -74,8 +74,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:social_media_app/features/activity/widgets/reels_ui.dart';
-import 'package:social_media_app/gen/colors.gen.dart';
 import 'package:video_player/video_player.dart';
+
 
 class ActivityScreen extends StatefulWidget {
   const ActivityScreen({super.key});
@@ -87,6 +87,28 @@ class ActivityScreen extends StatefulWidget {
 class _ActivityScreenState extends State<ActivityScreen> {
 
 
+  late VideoPlayerController videoPlayerController ;
+
+
+    @override
+  void initState() {
+    super.initState();
+   videoPlayerController = VideoPlayerController.asset(
+     "assets/videos/natural.mp4"
+        // Uri.parse(
+        //   'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+        // ),
+
+      )
+      ..initialize().then((_) {
+        videoPlayerController.play();
+      
+        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+        setState(() {});
+      });
+  }
+
+
 
  
   @override
@@ -95,25 +117,59 @@ class _ActivityScreenState extends State<ActivityScreen> {
       backgroundColor: Colors.grey,
       
 
-      body: SafeArea(child: SizedBox(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Stack(
           children: [
         
             // VIDEO Here
+       Container(
+        height: double.infinity,
+        width: double.infinity,
+   
+        child: videoPlayerController.value.isInitialized
+      ? FittedBox(
+          fit: BoxFit.cover, // Fills full screen
+          child: GestureDetector(
+            onTap: () {
+                     setState(() {
+              videoPlayerController.value.isPlaying
+                  ? videoPlayerController.pause()
+                  : videoPlayerController.play();
+            });
+            },
+            child: SizedBox(
+              width: videoPlayerController.value.size.width,
+              height: videoPlayerController.value.size.height,
+              child: VideoPlayer(videoPlayerController),
+            ),
+          ),
+        )
+      : const SizedBox(),
+      ),
+      
+            
+      
         
             //UI Here
             Align(
               alignment: Alignment.topCenter,
-              child: ReelsUI())
+              child: ReelsUI(videoPlayerController: videoPlayerController,))
             
           ],
         ),
-      )),
+      ),
      
      
     );
+  }
+
+
+    @override
+  void dispose() {
+    videoPlayerController.dispose();
+    super.dispose();
   }
 }
 

@@ -87,25 +87,22 @@ class ActivityScreen extends StatefulWidget {
 class _ActivityScreenState extends State<ActivityScreen> {
 
 
-  late VideoPlayerController videoPlayerController ;
+late VideoPlayerController videoPlayerController ;
 
 
     @override
   void initState() {
     super.initState();
-   videoPlayerController = VideoPlayerController.asset(
-     "assets/videos/natural.mp4"
-        // Uri.parse(
-        //   'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
-        // ),
-
-      )
+   
+ videoPlayerController = VideoPlayerController.asset("assets/videos/natural.mp4")
       ..initialize().then((_) {
+        videoPlayerController.setLooping(true);
         videoPlayerController.play();
-      
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
       });
+
+
+
   }
 
 
@@ -117,7 +114,11 @@ class _ActivityScreenState extends State<ActivityScreen> {
       backgroundColor: Colors.grey,
       
 
-      body: SizedBox(
+      body: PageView.builder(
+        scrollDirection: Axis.vertical,
+         itemCount: 5,
+        itemBuilder: (context,index){
+          return SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Stack(
@@ -127,7 +128,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
        Container(
         height: double.infinity,
         width: double.infinity,
-   
+         
         child: videoPlayerController.value.isInitialized
       ? FittedBox(
           fit: BoxFit.cover, // Fills full screen
@@ -159,8 +160,11 @@ class _ActivityScreenState extends State<ActivityScreen> {
             
           ],
         ),
-      ),
-     
+      );
+           
+      
+      
+      })
      
     );
   }

@@ -13,7 +13,7 @@ final List<Map<String, dynamic>> activities = [
     "image": Assets.images.friend2.path,
     "name": "John Doe",
     "action": "liked your photo",
-    "type": "Photo",
+    "type": "Follow",
     "time": "10m",
     "isGroup": true, // Group style
     "groupImages": [

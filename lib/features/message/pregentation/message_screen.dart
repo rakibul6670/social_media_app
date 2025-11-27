@@ -221,7 +221,7 @@ class _MessageScreenState extends State<MessageScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "System",
+                      "Activity",
                       style: TextFontStyle.textStyle12c787878PoppinsRegular,
                     ),
                     UIHelper.verticalSpace(16.h),
@@ -249,8 +249,10 @@ class _MessageScreenState extends State<MessageScreen> {
                                     left: 24.w,
                                     bottom: 0,
                                     child: Image.asset(
-                                      // activity["image"]!,
-                                      Assets.images.friend3.path,
+                                       activity["groupImages"] != null
+                                     ?
+                                     activity["groupImages"][1]
+                                     : Assets.images.friend3.path,
                                       height: 24.h,
                                       width: 24.w,
                                     ),

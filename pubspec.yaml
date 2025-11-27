@@ -30,6 +30,7 @@ dependencies:
   http: ^1.6.0
   cached_network_image: ^3.4.1
   dropdown_button2: ^2.3.9
+  video_player: ^2.10.1
 
 
 dev_dependencies:
@@ -62,6 +63,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/videos/natural.mp4
     
     
   

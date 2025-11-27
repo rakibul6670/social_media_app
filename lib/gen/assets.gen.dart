@@ -34,6 +34,10 @@ class $AssetsIconsGen {
   AssetGenImage get addPostInactive =>
       const AssetGenImage('assets/icons/add_post_inactive.png');
 
+  /// File path: assets/icons/check_mark.png
+  AssetGenImage get checkMark =>
+      const AssetGenImage('assets/icons/check_mark.png');
+
   /// File path: assets/icons/comment.png
   AssetGenImage get comment => const AssetGenImage('assets/icons/comment.png');
 
@@ -44,6 +48,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/forword_arrow.png
   AssetGenImage get forwordArrow =>
       const AssetGenImage('assets/icons/forword_arrow.png');
+
+  /// File path: assets/icons/green_circle.png
+  AssetGenImage get greenCircle =>
+      const AssetGenImage('assets/icons/green_circle.png');
 
   /// File path: assets/icons/left_arrow.png
   AssetGenImage get leftArrow =>
@@ -60,12 +68,19 @@ class $AssetsIconsGen {
   AssetGenImage get messageInactive =>
       const AssetGenImage('assets/icons/message_inactive.png');
 
+  /// File path: assets/icons/music.png
+  AssetGenImage get music => const AssetGenImage('assets/icons/music.png');
+
   /// File path: assets/icons/notification.png
   AssetGenImage get notification =>
       const AssetGenImage('assets/icons/notification.png');
 
   /// File path: assets/icons/plus.png
   AssetGenImage get plus => const AssetGenImage('assets/icons/plus.png');
+
+  /// File path: assets/icons/rectangleLine.png
+  AssetGenImage get rectangleLine =>
+      const AssetGenImage('assets/icons/rectangleLine.png');
 
   /// File path: assets/icons/save.png
   AssetGenImage get save => const AssetGenImage('assets/icons/save.png');
@@ -103,15 +118,19 @@ class $AssetsIconsGen {
         activityInactive,
         addPostActive,
         addPostInactive,
+        checkMark,
         comment,
         downArrow,
         forwordArrow,
+        greenCircle,
         leftArrow,
         liked,
         messageActive,
         messageInactive,
+        music,
         notification,
         plus,
+        rectangleLine,
         save,
         search,
         searchActive,
@@ -166,11 +185,22 @@ class $AssetsImagesGen {
       ];
 }
 
+class $AssetsVideosGen {
+  const $AssetsVideosGen();
+
+  /// File path: assets/videos/natural.mp4
+  String get natural => 'assets/videos/natural.mp4';
+
+  /// List of all assets
+  List<String> get values => [natural];
+}
+
 class Assets {
   const Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsVideosGen videos = $AssetsVideosGen();
 }
 
 class AssetGenImage {

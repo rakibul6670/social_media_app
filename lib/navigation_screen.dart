@@ -63,7 +63,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                height: 70.h,
+                height: 60.h,
                 width: 1.sw,
                 padding: EdgeInsets.only(bottom: 0.h, top: 10.h),
                 decoration: BoxDecoration(

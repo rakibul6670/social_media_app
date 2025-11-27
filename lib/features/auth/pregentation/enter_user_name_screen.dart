@@ -63,11 +63,11 @@ class _EnterUserNameScreenState extends State<EnterUserNameScreen> {
             child: Stack(
               clipBehavior: Clip.none,
               children: [
-                Positioned(right: 31, child: circleNumber(1, AppColors.cD7D7D7)),
+                Positioned(right: 31, child: circleNumber(2, AppColors.cD7D7D7)),
                 Positioned(
           
                     right: 56.w,
-                    child: circleNumber(2, AppColors.cD7D7D7)),
+                    child: circleNumber(1, AppColors.cD7D7D7)),
                 Positioned(
                     right: 0, child: circleNumber(3, AppColors.cfe4938)),
               ],

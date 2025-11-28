@@ -4,8 +4,8 @@ import 'package:social_media_app/common_widgets/custom_text_button.dart';
 import 'package:social_media_app/constants/text_font_style.dart';
 import 'package:social_media_app/features/auth/data/interest_left_map_data.dart';
 import 'package:social_media_app/features/auth/data/interest_right_map_data.dart';
-import 'package:social_media_app/features/auth/widgets/circle_number.dart';
-import 'package:social_media_app/features/auth/widgets/custom_choice_chip.dart';
+import 'package:social_media_app/features/auth/pregentation/widgets/circle_number.dart';
+import 'package:social_media_app/features/auth/pregentation/widgets/custom_choice_chip.dart';
 import 'package:social_media_app/gen/assets.gen.dart';
 import 'package:social_media_app/gen/colors.gen.dart';
 import 'package:social_media_app/helpers/all_routes.dart';
@@ -31,11 +31,9 @@ class _InterestedSelectScreenState extends State<InterestedSelectScreen> {
           children: [
             GestureDetector(
               onTap: () {
-                //   log("Back button cliked :${NavigationService.goBack}");
-                // NavigationService.goBack;
+            
+                 NavigationService.goBack;
 
-                //   //  NavigationService.goBackCall();
-                //   Navigator.of(context).pop();
               },
               child: Image.asset(
                 Assets.icons.leftArrow.path,
@@ -110,14 +108,14 @@ class _InterestedSelectScreenState extends State<InterestedSelectScreen> {
                       return CustomTexButton(
                       alignment: Alignment.center,
                       textStyle: TextFontStyle.textStyle16cFFFFFFPoppinsSemiBold.copyWith(
-                        color: interestsLeft[key]!?Colors.white : Color(0xffC2C2C2)
+                        color: interestsLeft[key]!?Colors.white : const Color(0xffC2C2C2)
                       ),
                       minimumSize: Size(216.w, 56.h),
                       bgColor: interestsLeft[key]!?AppColors.allPrimaryColor: AppColors.cF3F7FC ,
                       onPressed: () {
-                        interestsLeft[key] = !interestsLeft[key]!;
+                        
                         setState(() {
-                          
+                          interestsLeft[key] = !interestsLeft[key]!;
                         });
                       },
                       title: key,
@@ -134,7 +132,7 @@ class _InterestedSelectScreenState extends State<InterestedSelectScreen> {
                       alignment: Alignment.center,
                       minimumSize: Size(216.w, 56.h),
                            textStyle: TextFontStyle.textStyle16cFFFFFFPoppinsSemiBold.copyWith(
-                        color: interestsRight[key]!?Colors.white : Color(0xffC2C2C2)
+                        color: interestsRight[key]!?Colors.white : const Color(0xffC2C2C2)
                       ),
                       bgColor: interestsRight[key]!?AppColors.allPrimaryColor: AppColors.cF3F7FC ,
                       onPressed: () {

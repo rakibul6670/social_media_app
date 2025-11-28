@@ -20,6 +20,8 @@ class _SignInScreenState extends State<SignInScreen> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  bool isCheked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +57,7 @@ class _SignInScreenState extends State<SignInScreen> {
         
         body: SafeArea(
             child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,7 +84,29 @@ class _SignInScreenState extends State<SignInScreen> {
             
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value) {}),
+                    Container(
+                      height: 32.h,
+                      width: 32.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        color: AppColors.cF3F7FC
+                      ),
+                      child: Checkbox(
+                        activeColor: Colors.transparent,
+                       
+                        
+
+                        checkColor: AppColors.cAEAEAE,
+                        
+                        value: isCheked, 
+                        onChanged: (value) {
+                          setState(() {
+                            isCheked = !isCheked;
+                          });
+                        }
+                        ),
+                    ),
+
                     UIHelper.horizontalSpace(8.w),
                     Text(
                       "Remember me",
@@ -98,7 +122,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
             
                 UIHelper.verticalSpace(24),
-            
+                
+                //Login Button
                 Center(
                     child: CustomTexButton(
                    onPressed: () => NavigationService.navigateTo(Routes.genderSelectScreen),
@@ -107,6 +132,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 UIHelper.verticalSpace(32),
                 const Center(child: Text("Or")),
                 UIHelper.verticalSpace(32.h),
+
+                //Social Login
                 Row(
                   children: [
                     CustomTexButton(
@@ -132,7 +159,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   ],
                 ),
                 UIHelper.verticalSpace(75.h),
-            
+               
+               //Row Link Sign Up Text 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

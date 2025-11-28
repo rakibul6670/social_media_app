@@ -63,7 +63,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
-    - assets/videos/natural.mp4
+    - assets/videos/
     
     
   

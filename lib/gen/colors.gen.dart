@@ -14,45 +14,57 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors._();
 
-  /// Color: #1EC981
+  /// Color: #FF1EC981
   static const Color allPrimaryColor = Color(0xFF1EC981);
 
-  /// Color: #000000
+  /// Color: #FF000000
   static const Color c000000 = Color(0xFF000000);
 
-  /// Color: #141A52
+  /// Color: #FF141A52
   static const Color c141A52 = Color(0xFF141A52);
 
-  /// Color: #161C1E
+  /// Color: #FF161C1E
   static const Color c161C1E = Color(0xFF161C1E);
 
-  /// Color: #2F80ED
+  /// Color: #FF212652
+  static const Color c212652 = Color(0xFF212652);
+
+  /// Color: #FF2F80ED
   static const Color c2F80ED = Color(0xFF2F80ED);
 
-  /// Color: #434343
+  /// Color: #FF434343
   static const Color c434343 = Color(0xFF434343);
 
-  /// Color: #787878
+  /// Color: #FF787878
   static const Color c787878 = Color(0xFF787878);
 
-  /// Color: #939393
+  /// Color: #FF939393
   static const Color c939393 = Color(0xFF939393);
 
-  /// Color: #B3B3B3
+  /// Color: #FF979797
+  static const Color c979797 = Color(0xFF979797);
+
+  /// Color: #FFAEAEAE
+  static const Color cAEAEAE = Color(0xFFAEAEAE);
+
+  /// Color: #FFB3B3B3
   static const Color cB3B3B3 = Color(0xFFB3B3B3);
 
-  /// Color: #D7D7D7
+  /// Color: #FFD7D7D7
   static const Color cD7D7D7 = Color(0xFFD7D7D7);
 
-  /// Color: #F3F7FC
+  /// Color: #FFF3F7FC
   static const Color cF3F7FC = Color(0xFFF3F7FC);
+
+  /// Color: #FFFD4A38
+  static const Color cFD4A38 = Color(0xFFFD4A38);
 
   /// Color: #FFFFFFFF
   static const Color cFFFFFF = Color(0xFFFFFFFF);
 
-  /// Color: #FE4938
+  /// Color: #FFFE4938
   static const Color cfe4938 = Color(0xFFFE4938);
 
-  /// Color: #DC2121
+  /// Color: #FFDC2121
   static const Color secondaryColor = Color(0xFFDC2121);
 }

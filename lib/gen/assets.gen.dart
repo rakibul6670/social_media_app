@@ -34,12 +34,13 @@ class $AssetsIconsGen {
   AssetGenImage get addPostInactive =>
       const AssetGenImage('assets/icons/add_post_inactive.png');
 
+  /// File path: assets/icons/bgCircle.png
+  AssetGenImage get bgCircle =>
+      const AssetGenImage('assets/icons/bgCircle.png');
+
   /// File path: assets/icons/check_mark.png
   AssetGenImage get checkMark =>
       const AssetGenImage('assets/icons/check_mark.png');
-
-  /// File path: assets/icons/comment.png
-  AssetGenImage get comment => const AssetGenImage('assets/icons/comment.png');
 
   /// File path: assets/icons/down_arrow.png
   AssetGenImage get downArrow =>
@@ -59,6 +60,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/liked.png
   AssetGenImage get liked => const AssetGenImage('assets/icons/liked.png');
+
+  /// File path: assets/icons/menu.png
+  AssetGenImage get menu => const AssetGenImage('assets/icons/menu.png');
 
   /// File path: assets/icons/message_active.png
   AssetGenImage get messageActive =>
@@ -118,13 +122,14 @@ class $AssetsIconsGen {
         activityInactive,
         addPostActive,
         addPostInactive,
+        bgCircle,
         checkMark,
-        comment,
         downArrow,
         forwordArrow,
         greenCircle,
         leftArrow,
         liked,
+        menu,
         messageActive,
         messageInactive,
         music,
@@ -160,6 +165,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/male.png
   AssetGenImage get male => const AssetGenImage('assets/images/male.png');
 
+  /// File path: assets/images/tree.png
+  AssetGenImage get tree => const AssetGenImage('assets/images/tree.png');
+
   /// File path: assets/images/welcome_background.png
   AssetGenImage get welcomeBackground =>
       const AssetGenImage('assets/images/welcome_background.png');
@@ -179,6 +187,7 @@ class $AssetsImagesGen {
         friend2,
         friend3,
         male,
+        tree,
         welcomeBackground,
         welcomeForeground,
         welcomeRectangle
@@ -191,8 +200,14 @@ class $AssetsVideosGen {
   /// File path: assets/videos/natural.mp4
   String get natural => 'assets/videos/natural.mp4';
 
+  /// File path: assets/videos/program_typing.mp4
+  String get programTyping => 'assets/videos/program_typing.mp4';
+
+  /// File path: assets/videos/robot.mp4
+  String get robot => 'assets/videos/robot.mp4';
+
   /// List of all assets
-  List<String> get values => [natural];
+  List<String> get values => [natural, programTyping, robot];
 }
 
 class Assets {

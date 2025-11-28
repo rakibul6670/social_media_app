@@ -58,7 +58,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         ),
         body: SafeArea(
           child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 24),
               child: SingleChildScrollView(
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

@@ -49,7 +49,7 @@ class CustomTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(6),
           borderSide: BorderSide.none
         ),
-        contentPadding: EdgeInsets.all(16),
+        contentPadding: const EdgeInsets.all(16),
         hintText: hintText,
         labelText: labelText,
         prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,

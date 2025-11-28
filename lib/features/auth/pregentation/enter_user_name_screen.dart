@@ -4,7 +4,7 @@ import 'package:social_media_app/common_widgets/custom_text_button.dart';
 import 'package:social_media_app/common_widgets/custom_text_form_field.dart';
 import 'package:social_media_app/constants/text_font_style.dart';
 
-import 'package:social_media_app/features/auth/widgets/circle_number.dart';
+import 'package:social_media_app/features/auth/pregentation/widgets/circle_number.dart';
 
 import 'package:social_media_app/gen/assets.gen.dart';
 import 'package:social_media_app/gen/colors.gen.dart';
@@ -37,11 +37,10 @@ class _EnterUserNameScreenState extends State<EnterUserNameScreen> {
           children: [
             GestureDetector(
               onTap: () {
-                //   log("Back button cliked :${NavigationService.goBack}");
-                // NavigationService.goBack;
+            
+                 NavigationService.goBack;
 
-                //   //  NavigationService.goBackCall();
-                //   Navigator.of(context).pop();
+                          
               },
               child: Image.asset(
                 Assets.icons.leftArrow.path,

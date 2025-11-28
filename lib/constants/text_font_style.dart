@@ -83,6 +83,19 @@ class TextFontStyle {
     
  
   );
+    static final textStyle24c212652PoppinsBold= TextStyle(
+    fontFamily: "Poppins",
+    fontFamilyFallback: const [
+      'Open Sans',
+      'Roboto',
+      'Noto Sans',
+    ],
+    color: AppColors.c212652,
+    fontWeight: FontWeight.bold,
+    fontSize: 24.sp,
+    
+ 
+  );
 
 
  

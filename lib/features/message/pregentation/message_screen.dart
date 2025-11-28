@@ -8,7 +8,7 @@ import 'package:social_media_app/constants/text_font_style.dart';
 import 'package:social_media_app/features/message/data/activities.dart';
 import 'package:social_media_app/features/message/data/dropdown_items.dart';
 import 'package:social_media_app/features/message/data/messages.dart';
-import 'package:social_media_app/features/message/widgets/system_section.dart';
+import 'package:social_media_app/features/message/pregentation/widgets/system_section.dart';
 import 'package:social_media_app/gen/assets.gen.dart';
 import 'package:social_media_app/gen/colors.gen.dart';
 import 'package:social_media_app/helpers/ui_helpers.dart';
@@ -207,7 +207,7 @@ class _MessageScreenState extends State<MessageScreen> {
               Visibility(
                   visible: selectedItem == "All Activity" ||
                       selectedItem == "System",
-                  child: SystemSection()),
+                  child: const SystemSection()),
 
               Visibility(
                   visible: selectedItem == "All Activity" ||
@@ -281,7 +281,7 @@ class _MessageScreenState extends State<MessageScreen> {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Text(
                               activity["time"]!,
                               style: TextFontStyle
@@ -352,7 +352,7 @@ class _MessageScreenState extends State<MessageScreen> {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Text(
                               message["time"]!,
                               style: TextFontStyle

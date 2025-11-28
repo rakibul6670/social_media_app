@@ -68,8 +68,8 @@ final class RouteGenerator {
 
       case Routes.genderSelectScreen:
         return defaultTargetPlatform == TargetPlatform.iOS 
-            ? CupertinoPageRoute(builder: (context) => GenderSelectScreen())
-            : _FadedTransitionRoute(widget:GenderSelectScreen(), settings: settings);
+            ? CupertinoPageRoute(builder: (context) => const GenderSelectScreen())
+            : _FadedTransitionRoute(widget:const GenderSelectScreen(), settings: settings);
 
 
                   case Routes.interestedSelectScreen:
@@ -84,29 +84,29 @@ final class RouteGenerator {
 
       case Routes.addPostScreen:
         return defaultTargetPlatform == TargetPlatform.iOS
-            ? CupertinoPageRoute(builder: (context) => AddPostScreen())
-            : _FadedTransitionRoute(widget: AddPostScreen(), settings: settings);
+            ? CupertinoPageRoute(builder: (context) => const AddPostScreen())
+            : _FadedTransitionRoute(widget: const AddPostScreen(), settings: settings);
       
       case Routes.messageScreen:
         return defaultTargetPlatform == TargetPlatform.iOS
-            ? CupertinoPageRoute(builder: (context) => MessageScreen())
-            : _FadedTransitionRoute(widget: MessageScreen(), settings: settings);
+            ? CupertinoPageRoute(builder: (context) => const MessageScreen())
+            : _FadedTransitionRoute(widget: const MessageScreen(), settings: settings);
 
       case Routes.genderSelectScreen:
         return defaultTargetPlatform == TargetPlatform.iOS 
-            ? CupertinoPageRoute(builder: (context) => GenderSelectScreen())
-            : _FadedTransitionRoute(widget:GenderSelectScreen(), settings: settings);
+            ? CupertinoPageRoute(builder: (context) => const GenderSelectScreen())
+            : _FadedTransitionRoute(widget:const GenderSelectScreen(), settings: settings);
 
 
                   case Routes.searchScreen:
         return defaultTargetPlatform == TargetPlatform.iOS 
-            ? CupertinoPageRoute(builder: (context) => SearchScreen())
-            : _FadedTransitionRoute(widget: SearchScreen(), settings: settings);
+            ? CupertinoPageRoute(builder: (context) => const SearchScreen())
+            : _FadedTransitionRoute(widget: const SearchScreen(), settings: settings);
 
                   case Routes.userProfileScreen:
         return defaultTargetPlatform == TargetPlatform.iOS 
-            ? CupertinoPageRoute(builder: (context) => UserProfileScreen())
-            : _FadedTransitionRoute(widget: UserProfileScreen(), settings: settings);
+            ? CupertinoPageRoute(builder: (context) => const UserProfileScreen())
+            : _FadedTransitionRoute(widget: const UserProfileScreen(), settings: settings);
 
       // case Routes.productDetailsScreen:
       //   final args = settings.arguments as Map;
